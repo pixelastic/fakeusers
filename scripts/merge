@@ -27,8 +27,9 @@ class MergeUsers
     final = random + algolia
     final.shuffle!
 
-    ap final
 
+    json = JSON.pretty_generate(final)
+    File.write('./data/final.json', json)
   end
 end
 MergeUsers.new.run
