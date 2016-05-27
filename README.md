@@ -3,6 +3,10 @@
 This is a list of fake users, with random names, address, and profile
 picture to use in your mockups and demos.
 
+Check `./data/final.json` for the final list.
+
+Data is done in a way that not two profiles can have the same profile picture.
+
 ## Example
 
 Here is an example of a fake identity:
