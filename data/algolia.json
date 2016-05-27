@@ -1,0 +1,200 @@
+[
+  {
+    "email": "philip.poulsen@example.com",
+    "gender": "male",
+    "phone_number": "86289180",
+    "birthdate": 510999593,
+    "location": {
+      "street": "3483 valdemarsvej",
+      "city": "støvring ",
+      "state": "danmark",
+      "postcode": 41730
+    },
+    "username": "organicpanda414",
+    "password": "passport",
+    "first_name": "philip",
+    "last_name": "poulsen",
+    "title": "mr",
+    "picture": "algolia/men/raymond.png"
+  },
+  {
+    "email": "august.madsen@example.com",
+    "gender": "male",
+    "phone_number": "64980000",
+    "birthdate": 947991051,
+    "location": {
+      "street": "6057 fyrvej",
+      "city": "ryslinge",
+      "state": "hovedstaden",
+      "postcode": 56454
+    },
+    "username": "goldenpeacock829",
+    "password": "shai",
+    "first_name": "august",
+    "last_name": "madsen",
+    "title": "mr",
+    "picture": "algolia/men/olivier.png"
+  },
+  {
+    "email": "gerry.terry@example.com",
+    "gender": "male",
+    "phone_number": "0710-667-652",
+    "birthdate": 87780021,
+    "location": {
+      "street": "2730 grange road",
+      "city": "edinburgh",
+      "state": "lancashire",
+      "postcode": "N9 7UQ"
+    },
+    "username": "goldenlion140",
+    "password": "darklord",
+    "first_name": "gerry",
+    "last_name": "terry",
+    "title": "mr",
+    "picture": "algolia/men/xander.png"
+  },
+  {
+    "email": "martin.petersen@example.com",
+    "gender": "male",
+    "phone_number": "0179-6436757",
+    "birthdate": 290306263,
+    "location": {
+      "street": "6603 eichenweg",
+      "city": "celle",
+      "state": "bremen",
+      "postcode": 30197
+    },
+    "username": "ticklishduck426",
+    "password": "road",
+    "first_name": "martin",
+    "last_name": "petersen",
+    "title": "mr",
+    "picture": "algolia/men/julien.png"
+  },
+  {
+    "email": "eric.elliott@example.com",
+    "gender": "male",
+    "phone_number": "0471-048-634",
+    "birthdate": 73120224,
+    "location": {
+      "street": "7043 homestead rd",
+      "city": "bundaberg",
+      "state": "northern territory",
+      "postcode": 2833
+    },
+    "username": "bigostrich689",
+    "password": "nicholas",
+    "first_name": "eric",
+    "last_name": "elliott",
+    "title": "mr",
+    "picture": "algolia/men/honza.png"
+  },
+  {
+    "email": "jimi.seppala@example.com",
+    "gender": "male",
+    "phone_number": "042-098-77-56",
+    "birthdate": 486936714,
+    "location": {
+      "street": "2726 bulevardi",
+      "city": "kontiolahti",
+      "state": "south karelia",
+      "postcode": 95876
+    },
+    "username": "smallrabbit318",
+    "password": "omega1",
+    "first_name": "jimi",
+    "last_name": "seppala",
+    "title": "mr",
+    "picture": "algolia/men/tim.png"
+  },
+  {
+    "email": "julius.jokinen@example.com",
+    "gender": "male",
+    "phone_number": "049-362-79-58",
+    "birthdate": 850169030,
+    "location": {
+      "street": "4610 korkeavuorenkatu",
+      "city": "padasjoki",
+      "state": "northern ostrobothnia",
+      "postcode": 70918
+    },
+    "username": "blacklion612",
+    "password": "blackbir",
+    "first_name": "julius",
+    "last_name": "jokinen",
+    "title": "mr",
+    "picture": "algolia/men/gabe.png"
+  },
+  {
+    "email": "philipp.gruber@example.com",
+    "gender": "male",
+    "phone_number": "0176-9883434",
+    "birthdate": 478510178,
+    "location": {
+      "street": "9031 mittelweg",
+      "city": "ansbach",
+      "state": "hessen",
+      "postcode": 90911
+    },
+    "username": "bluepeacock577",
+    "password": "teddy1",
+    "first_name": "philipp",
+    "last_name": "gruber",
+    "title": "mr",
+    "picture": "algolia/men/jeremy.png"
+  },
+  {
+    "email": "valdemar.kristensen@example.com",
+    "gender": "male",
+    "phone_number": "25191900",
+    "birthdate": 388059862,
+    "location": {
+      "street": "8457 ådalsvej",
+      "city": "stoevring",
+      "state": "danmark",
+      "postcode": 17858
+    },
+    "username": "browngoose407",
+    "password": "fast",
+    "first_name": "valdemar",
+    "last_name": "kristensen",
+    "title": "mr",
+    "picture": "algolia/men/lucas.png"
+  },
+  {
+    "email": "florence.zhang@example.com",
+    "gender": "female",
+    "phone_number": "(046)-438-2295",
+    "birthdate": 1311522111,
+    "location": {
+      "street": "5893 bay view road",
+      "city": "timaru",
+      "state": "west coast",
+      "postcode": 78519
+    },
+    "username": "crazykoala253",
+    "password": "686868",
+    "first_name": "florence",
+    "last_name": "zhang",
+    "title": "miss",
+    "picture": "algolia/women/fanette.png"
+  },
+  {
+    "email": "yvete.fogaça@example.com",
+    "gender": "female",
+    "phone_number": "(92) 9775-8177",
+    "birthdate": 1386835220,
+    "location": {
+      "street": "1085 rua dezesseis de maio",
+      "city": "maceió",
+      "state": "rio de janeiro",
+      "postcode": 83361
+    },
+    "username": "orangeladybug456",
+    "password": "gabriell",
+    "first_name": "yvete",
+    "last_name": "fogaça",
+    "title": "miss",
+    "picture": "algolia/women/pragati.png"
+  }
+]

@@ -1,0 +1,62 @@
+#!/usr/bin/env ruby
+require 'json'
+require 'open-uri'
+require 'awesome_print'
+require 'uri'
+
+# Download a random identities for Algolia people
+class DownloadFakeAlgolia
+  def initialize
+    @endpoint = 'http://api.randomuser.me/'
+  end
+
+  def simplify_user(user)
+    {
+      email: user['email'],
+      gender: user['gender'],
+      phone_number: user['cell'],
+      birthdate: user['dob'],
+      location: user['location'],
+      username: user['login']['username'],
+      password: user['login']['password'],
+      first_name: user['name']['first'],
+      last_name: user['name']['last'],
+      title: user['name']['title']
+    }
+  end
+
+  def run
+    list = []
+
+    Dir['./pictures/algolia/men/*.png'].each do |man|
+      filename = File.basename(man)
+      name = File.basename(filename, '.png')
+      puts "Downloading fake #{name}"
+
+      picture = "algolia/men/#{filename}"
+      url = "#{@endpoint}?gender=male"
+      raw = JSON.parse(open(url).read)['results'][0]
+      user = simplify_user(raw)
+      user[:picture] = picture
+      list << user
+    end
+
+    Dir['./pictures/algolia/women/*.png'].each do |man|
+      filename = File.basename(man)
+      name = File.basename(filename, '.png')
+      puts "Downloading fake #{name}"
+
+      picture = "algolia/women/#{filename}"
+      url = "#{@endpoint}?gender=female"
+      raw = JSON.parse(open(url).read)['results'][0]
+      user = simplify_user(raw)
+      user[:picture] = picture
+      list << user
+    end
+
+    puts 'Saving file'
+    json = JSON.pretty_generate(list)
+    File.write('./data/algolia.json', json)
+  end
+end
+DownloadFakeAlgolia.new.run

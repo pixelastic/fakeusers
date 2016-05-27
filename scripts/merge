@@ -1,0 +1,34 @@
+#!/usr/bin/env ruby
+require 'json'
+require 'open-uri'
+require 'awesome_print'
+require 'uri'
+
+# Merge the random users and Algolia one
+class MergeUsers
+  def simplify_user(user)
+    {
+      email: user['email'],
+      gender: user['gender'],
+      phone_number: user['cell'],
+      birthdate: user['dob'],
+      location: user['location'],
+      username: user['login']['username'],
+      password: user['login']['password'],
+      first_name: user['name']['first'],
+      last_name: user['name']['last'],
+      title: user['name']['title']
+    }
+  end
+
+  def run
+    random = JSON.parse(File.open('./data/randomuser.json').read)
+    algolia = JSON.parse(File.open('./data/algolia.json').read)
+    final = random + algolia
+    final.shuffle!
+
+    ap final
+
+  end
+end
+MergeUsers.new.run

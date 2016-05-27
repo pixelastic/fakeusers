@@ -1,0 +1,28 @@
+#!/usr/bin/env ruby
+require 'json'
+require 'open-uri'
+require 'awesome_print'
+require 'shellwords'
+require 'fileutils'
+
+# Download pictures from randomuser.me
+class DownloadPictures
+  def initialize
+    @endpoint = 'http://api.randomuser.me/portraits/'
+  end
+
+  def run
+    users = JSON.parse(File.open('./data/randomuser.json').read)
+
+    users.each do |user|
+      filename = user['picture']
+      url = "#{@endpoint}#{filename}"
+      filepath = File.expand_path("./pictures/#{filename}")
+
+      FileUtils.mkdir_p(File.dirname(filepath))
+
+      `wget #{url.shellescape} -O #{filepath.shellescape}`
+    end
+  end
+end
+DownloadPictures.new.run

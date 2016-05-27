@@ -1,0 +1,54 @@
+#!/usr/bin/env ruby
+require 'json'
+require 'open-uri'
+require 'awesome_print'
+require 'uri'
+
+# Download a random sample of users from randomuser.me
+class DownloadSample
+  def initialize
+    @endpoint = 'http://api.randomuser.me/'
+    @max_fetch_results = 5000
+  end
+
+  def simplify_user(user)
+    medium_picture = user['picture']['medium']
+    dirname = URI(medium_picture).path.split('/')[-2]
+    basename = File.basename(user['picture']['medium'])
+    picture = "#{dirname}/#{basename}"
+    {
+      email: user['email'],
+      gender: user['gender'],
+      phone_number: user['cell'],
+      birthdate: user['dob'],
+      location: user['location'],
+      username: user['login']['username'],
+      password: user['login']['password'],
+      first_name: user['name']['first'],
+      last_name: user['name']['last'],
+      title: user['name']['title'],
+      picture: picture
+    }
+  end
+
+  def run
+
+    puts "Fetching #{@max_fetch_results} users from randomuser.me"
+    list_url = "#{@endpoint}?results=#{@max_fetch_results}"
+    raw = JSON.parse(open(list_url).read)
+    list = raw['results'].map { |user| simplify_user(user) }
+
+    puts 'Grouping my picture'
+    list = list.group_by { |user| user[:picture] }
+
+    unique_list = []
+    list.each do |_id, users|
+      unique_list << users[0]
+    end
+
+    puts 'Saving file'
+    json = JSON.pretty_generate(unique_list)
+    File.write('./data/randomuser.json', json)
+  end
+end
+DownloadSample.new.run
