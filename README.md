@@ -34,9 +34,9 @@ Here is an example of a fake identity:
 
 ## Sources
 
-Data is coming from those various sources
+Data is coming from those sources
 
-- [randomeuser.me](https://randomuser.me/) (handpicked list from [UI
+- [randomeser.me](https://randomuser.me/) (handpicked list from [UI
   faces](http://uifaces.com/)
 - Handpicked friends who gave me their consent to use their face in the list
 
